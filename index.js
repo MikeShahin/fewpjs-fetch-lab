@@ -1,5 +1,16 @@
 function fetchBooks() {
+  return fetch('https://anapioficeandfire.com/api/books')
+  .then(resp => resp.json())
+  .then(json => {
+    return renderBooks(json)
+    // const books = [];
 
+    // console.log(json);
+    // for(let i = 0; i < json.length; i++) {
+    //   console.log(json[i].name);
+    // }
+    
+  });
 }
 
 function renderBooks(books) {
